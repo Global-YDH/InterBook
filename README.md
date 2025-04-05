@@ -35,18 +35,7 @@
 > * MySQL 기반 ORM 설계를 통해 효율적인 데이터 접근 체계화
 > * 쓰레드 풀 도입하여 주요 API에 대한 부하 성능 30% 감소
 
-</br>
 
-## 🥺 Trouble Shooting  
-### ORM 성능 저하 이슈  
-> * JOIN이 많은 쿠어리에서 발생한 속도 저하 문제를 `FetchType.LAZY`, JPQL 튜닉을 통해 해결했습니다.  
-> * 복지한 연관관계는 DTO 분리를 통해 API 응답 속도 계정  
-
-### 슬라이드 버그  
-> * React 슬라이더 컴포넌트의 리렌더링 이슈를 `useMemo`와 `useCallback` 체계화로 해결  
-### React Native base64 
-> * React Native의 Image 컴포넌트는 uri 형태의 이미지 경로나 require()를 통한 정적 자원 로딩은 지원하지만, base64 문자열을 직접 처리하는 방식은 공식적으로 지원되지 않음
-직접 디코딩하여 Blob 형태로 변환하는 방법 고려
 
 </br>
 
