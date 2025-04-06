@@ -26,11 +26,12 @@ public class MediaController {
     private static final String MEDIA_DIR = "src/main/resources/static/media/";
     private static final String MUSIC_FILE_PATH = MEDIA_DIR + "output_music.wav";
     private static final String IMAGE_FILE_PATH = MEDIA_DIR + "output_image.png";
-
+    @value("${aiServer})
+    privatr string ai;
     @PostMapping("/fetch-media")
     public ResponseEntity<String> fetchMedia(@RequestBody EventRequest eventRequest) {
-        System.out.println("dsdas");
-        String url = "http://192.168.0.36:8000/process-event/";
+        
+        String url = ai;
         try {
             ResponseEntity<JsonNode> mediaResponse = restTemplate.postForEntity(url, eventRequest, JsonNode.class);
 
